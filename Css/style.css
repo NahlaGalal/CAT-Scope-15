@@ -1,0 +1,451 @@
+@font-face {
+  src: url("../Fonts/Cairo-Regular.ttf");
+  font-family: "Cairo";
+}
+
+@font-face {
+  src: url("../Fonts/Quantify\ Bold.ttf");
+  font-family: "Quantify";
+}
+
+:root {
+  --red-color: #cf1f28;
+  --white-color: #fff;
+	--grey-color: #171717;
+	--black-color: #000;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+/* Start header */
+header {
+  min-height: 100vh;
+  background: url("../Images/scope-web-page.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Start navbar */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px auto 0;
+  align-items: center;
+}
+
+header nav a.navbar-brand {
+  font-family: "Quantify", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--red-color);
+  background-color: var(--white-color);
+  padding: 10px 5px;
+}
+
+header nav a.navbar-brand span {
+  color: var(--black-color);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+header nav ul li a {
+  color: var(--white-color);
+  font-weight: 500;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+/* End navbar */
+
+header .headers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 77px);
+  font-family: "Quantify", sans-serif;
+  color: var(--white-color);
+}
+
+header .headers h1 {
+  font-size: 40px;
+}
+
+header .headers h2 {
+  font-size: 30px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+header .headers span {
+  color: var(--black-color);
+}
+/* End header */
+
+/* Start main */
+main section h2 {
+  margin-top: 35px;
+  text-align: center;
+  color: var(--red-color);
+  font-family: "Quantify", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+main section h2 img {
+  width: 48px;
+  margin-right: 10px;
+}
+
+/* Start about */
+main #about {
+  position: relative;
+  top: -70px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+#about h2 span {
+  color: var(--black-color);
+}
+
+#about p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+  line-height: 2em;
+}
+
+#about p span {
+  color: var(--red-color);
+}
+
+#about a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white-color);
+  padding: 10px;
+  background-color: var(--red-color);
+  font-size: 24px;
+  font-family: "Quantify", sans-serif;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 50px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+#about img {
+  width: 48px;
+  margin-right: 10px;
+}
+/* End about */
+
+/* Start speakers */
+#speakers div {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#speakers div figure img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#speakers div figure figcaption {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  padding: 10px;
+  margin-top: -3px;
+  text-align: center;
+}
+/* End speakers */
+
+/* Start schedule */
+#schedule {
+  position: relative;
+  background: url("../Images/CatBack.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+	margin-top: 44px;
+	background-attachment: fixed;
+	padding-bottom: 44px;
+	box-sizing: border-box;
+}
+
+#schedule span.vr-line {
+  display: block;
+  height: calc(100% - 206px);
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 3px;
+  border: 1px solid var(--red-color);
+  width: 0;
+	z-index: 0;
+	margin: 0 auto;
+}
+
+#schedule h2 {
+  color: var(--white-color);
+}
+
+#schedule .days {
+  display: flex;
+  justify-content: center;
+}
+
+#schedule .days button {
+  color: var(--red-color);
+  background-color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  font-family: "Quantify", sans-serif;
+  font-size: 24px;
+  outline: none;
+}
+
+#schedule .days button:first-child {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#schedule .days button:last-child {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+#schedule .days button.active {
+  color: var(--white-color);
+  background-color: var(--red-color);
+}
+
+#schedule > div {
+	width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 125px 1fr;
+  grid-template-rows: 150px;
+  align-items: center;
+}
+
+#schedule .session-icon {
+  width: 65px;
+  height: 65px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#schedule .session-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  padding: 9px;
+}
+
+#schedule .session {
+  height: calc(100% - 40px);
+  background-color: var(--white-color);
+  border-radius: 10px;
+  position: relative;
+}
+
+#schedule .session::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: calc(50% - 10px);
+  width: 0;	
+  height: 0;
+  border-left: 20px solid var(--white-color);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+#schedule .session h3 {
+  color: var(--red-color);
+  font-family: "Quantify", sans-serif;
+  margin: 10px;
+  font-size: 24px;
+}
+
+#schedule .session p {
+  margin: 10px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+#schedule p.time {
+  color: var(--red-color);
+  font-weight: 400;
+}
+
+#schedule > div:nth-child(2n + 1) .session {
+  order: 3;
+}
+
+#schedule > div:nth-child(2n + 1) .session::before {
+	right: unset;
+	left: -20px;
+	border-left: 0;
+	border-right: 20px solid var(--white-color);
+}
+
+#schedule > div:nth-child(2n + 1) .session-icon {
+  order: 2;
+}
+
+#schedule > div:nth-child(2n + 1) p.time {
+  justify-self: end;
+}
+
+#schedule .circle-end {
+	display: block;
+  height: 10px;
+	position: absolute;
+	bottom: 44px;
+  left: 0;
+  right: 3px;
+  margin: 0 auto;
+	width: 10px;
+	background-color: var(--red-color);
+	border-radius: 5px;
+}
+/* End schedule */
+
+/* Start rollin */
+#rollIn .buttons {
+	display: flex;
+	width: 80%;
+	margin: 0 auto 48px;
+	justify-content: space-evenly;
+}
+
+#rollIn .buttons button {
+	background-color: var(--black-color);
+	color: var(--white-color);
+	font-size: 24px;
+	font-family: "Quantify", sans-serif;
+	border-radius: 50px;
+	border: none;
+	width: 200px;
+	height: 50px;
+}
+
+#rollIn .buttons button:first-child {
+	background-color: var(--red-color);
+}
+/* End rollin */
+
+/* Start location */
+#location {
+	background-color: var(--grey-color);
+	overflow: hidden;
+}
+
+#location h2 {
+	margin-top: 28px;
+	color: var(--white-color);
+}
+
+#location video {
+	width: 50%;
+	margin: 0 auto;
+	max-height: 100vh;
+	display: block;
+	margin-bottom: 60px;
+}
+/* End location */
+
+/* Start Footer */
+footer {
+	overflow: hidden;
+}
+
+footer section {
+	background: url("../Images/Map.png") no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+footer section p {
+	width: 75%;
+	margin: 40px auto;
+	color: var(--white-color);
+	font-size: 30px;
+	text-align: center;
+	line-height: 2em;
+}
+
+footer section p span {
+	color: var(--black-color);
+}
+
+footer section > a {
+	display: block;
+	margin: 0 auto;
+	background-color: var(--black-color);
+	color: var(--white-color);
+	border-radius: 50px;
+	font-family: "Quantify", sans-serif;
+	padding: 15px;
+	font-size: 26px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: max-content;
+}
+
+footer section img {
+	width: 48px;
+	height: 48px;
+	margin-right: 10px;
+}
+
+footer section ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 40px 0 60px;
+	padding: 0;
+}
+
+footer section ul img {
+	margin: 0 5px;
+}
+
+footer > p {
+	margin: 0;
+	text-align: center;
+	background-color: var(--grey-color);
+	color: var(--white-color);
+}
+/* End Footer */
+
+/* End main */
